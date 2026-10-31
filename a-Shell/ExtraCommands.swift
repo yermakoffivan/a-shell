@@ -1742,8 +1742,8 @@ public func call(argc: Int32, argv: UnsafeMutablePointer<UnsafeMutablePointer<In
     guard args != nil  else {
         return -1
     }
-    guard args!.count >= 1  else {
-        fputs("Usage: \(args![0]) [name]\n", thread_stderr)
+    guard args!.count >= 2  else {
+        fputs("Usage: \(args![0]) name\n", thread_stderr)
         return -1
     }
     var key = args![1]
